@@ -220,12 +220,18 @@ $ autoencoder_train = model.fit(X_train,X_train,epochs=10000, batch_size=32, shu
 |     :---       |   :---:    | ---:|
 |    x      |   Numpy array of training data (if the model has a single input)    | or list of Numpy arrays (if the model has multiple inputs). If input layers in the model are named, you can also pass a dictionary mapping input names to Numpy arrays.  x can be None (default) if feeding from framework-native tensors (e.g. TensorFlow data tensors).|
 |    y      |    Numpy array of target (label) data (if the model has a single output)   |  or list of Numpy arrays (if the model has multiple outputs). If output layers in the model are named, you can also pass a dictionary mapping output names to Numpy arrays.  y can be None (default) if feeding from framework-native tensors (e.g. TensorFlow data tensors).|
-|    patience      |   Positive Integer    |  number of epochs with no improvement after which training will be stopped.|
-|    verbose      |    Integer    | verbosity mode.|
-|    mode      |   auto, min, max    | In min mode, training will stop when the quantity monitored has stopped decreasing; in max mode it will stop when the quantity monitored has stopped increasing; in auto mode, the direction is automatically inferred from the name of the monitored quantity.|
-|    baseline      |   ---    | Baseline value for the monitored quantity to reach. Training will stop if the model doesn't show improvement over the baseline.|
-|    restore_best_weights      |   ---    | quantity to be monitored.|
-|    monitor      |   False    |  whether to restore model weights from the epoch with the best value of the monitored quantity. If False, the model weights obtained at the last step of training are used.|
+|    batch_size      |   Integer or None    |  Number of samples per gradient update. If unspecified, batch_size will default to 32.|
+|    epochs      |     Integer, Number of epochs to train the model    |An epoch is an iteration over the entire x and y data provided. Note that in conjunction with initial_epoch,  epochs is to be understood as "final epoch". The model is not trained for a number of iterations given by epochs, but merely until the epoch of index epochs is reached.|
+|    verbose      |   Integer (0, 1, or 2)  | Verbosity mode. 0 = silent, 1 = progress bar, 2 = one line per epoch.
+callbacks: List of keras.callbacks.Callback instances. List of callbacks to apply during training and validation (if ).|
+|    validation_split      |   Float between 0 and 1    | Fraction of the training data to be used as validation data. The model will set apart this fraction of the training data, will not train on it, and will evaluate the loss and any model metrics on this data at the end of each epoch. The validation data is selected from the last samples in the x and y data provided, before shuffling.|
+|    validation_data      |   tuple (x_val, y_val) or tuple  (x_val, y_val, val_sample_weights) on which to evaluate the loss and any model metrics at the end of each epoch    | The model will not be trained on this data.  validation_data will override validation_split.|
+|    shuffle      |   Boolean (whether to shuffle the training data before each epoch) or str (for 'batch')    | 'batch' is a special option for dealing with the limitations of HDF5 data; it shuffles in batch-sized chunks. Has no effect when steps_per_epoch is not None.|
+|     class_weight       |   Optional dictionary mapping class indices (integers) to a weight (float) value, used for weighting the loss function (during training only)    |  This can be useful to tell the model to "pay more attention" to samples from an under-represented class.|
+|     sample_weight       |   Optional Numpy array of weights for the training samples, used for weighting the loss function (during training only).    | You can either pass a flat (1D) Numpy array with the same length as the input samples (1:1 mapping between weights and samples), or in the case of temporal data, you can pass a 2D array with shape  (samples, sequence_length), to apply a different weight to every timestep of every sample. In this case you should make sure to specify sample_weight_mode="temporal" in compile().|
+|     initial_epoch       |   Integer    | Epoch at which to start training (useful for resuming a previous training run).|
+|     :---       |   :---:    | ---:|
+
 
 &nbsp;
 
