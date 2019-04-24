@@ -57,16 +57,28 @@ user@machine:~$ conda install scikit-learn
 
 You can run commands in console or using the Jupyter Notebook instead.  
 
-### 3.1. Importing Dataset
+### 3.1. Importing  and Preparing Dataset
 Use read_csv() for importing dataset
 
 ```console
 $ pd.read_csv("Dataset directory")
 ```
 Use np.shape() for checking the shape of the dataset.
+
 ```console
 $ np.shape(data)
 ```
+By using .as_matrix() we can change the type of dataset into matrix
+```console
+$ data.as_matrix()
+```
+#### 3.1.1. Scaling Dataset
+
+Dividing all of the elements by maximum number
+```console
+$ data / np.max(data)
+```
+
 
 #### 3.1.1. Training Purpose
 ```console
