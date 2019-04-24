@@ -219,10 +219,7 @@ $ autoencoder_train = model.fit(X_train,X_train,epochs=10000, batch_size=32, shu
 |   Argument     |    Type    | Help   |
 |     :---       |   :---:    | ---:|
 |    x      |   Numpy array of training data (if the model has a single input)    | or list of Numpy arrays (if the model has multiple inputs). If input layers in the model are named, you can also pass a dictionary mapping input names to Numpy arrays.  x can be None (default) if feeding from framework-native tensors (e.g. TensorFlow data tensors).|
-
-
 |    y      |    Numpy array of target (label) data (if the model has a single output)   |  or list of Numpy arrays (if the model has multiple outputs). If output layers in the model are named, you can also pass a dictionary mapping output names to Numpy arrays.  y can be None (default) if feeding from framework-native tensors (e.g. TensorFlow data tensors).|
-
 |    patience      |   Positive Integer    |  number of epochs with no improvement after which training will be stopped.|
 |    verbose      |    Integer    | verbosity mode.|
 |    mode      |   auto, min, max    | In min mode, training will stop when the quantity monitored has stopped decreasing; in max mode it will stop when the quantity monitored has stopped increasing; in auto mode, the direction is automatically inferred from the name of the monitored quantity.|
