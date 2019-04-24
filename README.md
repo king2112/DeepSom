@@ -8,17 +8,18 @@
 
 ## 1. Download Package
 ### 1.1. Direct Download
-We can directly [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/mrzResearchArena/PyFeat) by clicking the link.
+You can directly [download](https://github.com/king2112/DeePanc/archive/master.zip) by clicking the link.
 
-**Note:** The package will download in zip format `(.zip)` named `PyFeat-master.zip`.
+**Note:** The package will download in zip format `(.zip)` named `DeePanc-master-2.zip`.
 
 ***`or,`***
 
 ### 1.2. Clone a GitHub Repository (Optional)
 
 Cloning a repository syncs it to our local machine (Example for Linux-based OS). After clone, we can add and edit files and then push and pull updates.
-- Clone over HTTPS: `user@machine:~$ git clone https://github.com/mrzResearchArena/PyFeat.git `
-- Clone over SSH: `user@machine:~$ git clone git@github.com:mrzResearchArena/PyFeat.git `
+- Clone over HTTPS: `user@machine:~$ git clone https://github.com/king2112/DeePanc.git `
+
+- Clone over SSH: `user@machine:~$ git clone git@github.com:king2112/DeePanc.git `
 
 **Note #1:** If the clone was successful, a new sub-directory appears on our local drive. This directory has the same name (PyFeat) as the `GitHub` repository that we cloned.
 
