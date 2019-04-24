@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # <center>DeePanc: A Python-basedFeature Construction Tool from Simple Somatic Mutational load of Protein-coding genes</center>
 
@@ -274,3 +275,6 @@ tional biology, 10(7):e1003711, 2014.
 **[17]** Shahana Yasmin Chowdhury, Swakkhar Shatabda, and Abdollah Dehzangi. Idnaprot-
 es: Identification of dna-binding proteins using evolutionary and structural features.
 Scientific Reports, 7(1):14938, 2017.
+=======
+MOHEMM
+>>>>>>> c2529519364e67154520318d9ad259d25dfa2800
