@@ -104,6 +104,8 @@ Using Dense layer for input layer
 |   Argument     |    Type     |   Default | Help   |
 |     :---       |   :---:       |  :---:    | ---:|
 | units | Positive integer | --- | dimensionality of the output space. |
+| activation | --- | If you don't specify anything, no activation is applied | In this work we utilized 'relu' for first 4 Dense layers |
+
 
 &nbsp;
 
