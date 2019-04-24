@@ -178,6 +178,30 @@ Use Summary() for seeing detail of the model
 ```console
 $ model.summary()
 ```
+For the aim of preventing over-fitting we have used Early Stoping monitoring.
+You can use EarlyStopping by calling it from keras.callbacks
+
+```console
+$ earlyStopping =keras.callbacks.EarlyStopping(monitor='val_loss', min_delta=0, patience=3, verbose=0, mode='auto')
+```
+**Note #2:**  You can modify the EarlyStopping with desire Arguments.
+&nbsp;
+
+
+#### Table 3: Arguments Details for the EarlyStopping
+|   Argument     |    Type    | Help   |
+|     :---       |   :---:    | ---:|
+|    monitor      |   ---    | quantity to be monitored.|
+|    min_delta      |   Positive double    | minimum change in the monitored quantity to qualify as an improvement, i.e. an absolute change of less than min_delta, will count as no improvement.|
+|    patience      |   Positive Integer    |  number of epochs with no improvement after which training will be stopped.|
+|    verbose      |    Integer    | verbosity mode.|
+|    mode      |   auto, min, max    | In min mode, training will stop when the quantity monitored has stopped decreasing; in max mode it will stop when the quantity monitored has stopped increasing; in auto mode, the direction is automatically inferred from the name of the monitored quantity.|
+|    baseline      |   ---    | Baseline value for the monitored quantity to reach. Training will stop if the model doesn't show improvement over the baseline.|
+|    restore_best_weights      |   ---    | quantity to be monitored.|
+|    monitor      |   False    |  whether to restore model weights from the epoch with the best value of the monitored quantity. If False, the model weights obtained at the last step of training are used.|
+
+
+
 
 
 
