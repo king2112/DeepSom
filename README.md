@@ -90,14 +90,19 @@ Use np.reshape() in order to reshape your dataset into desire input shape
 $ data =np.reshape(data, [desire shape])
 ```
 
-#### 3.2. Designing Autoencoder Deep Neural Network
+### 3.2. Designing Autoencoder Deep Neural Network
 
 You first have to determine what is the shape of input
 
 ```console
 $ input = Input(shape = (desire shape))
 ```
-***`or,`***
+Using Dense layer for input layer
+#### Table 1: Arguments Details for Dense Layer
+
+|   Argument     |   Corresponding Optional Argument |     Type     |   Default | Help   |
+
+
 
 ```console
 user@machine:~$ python main.py -seq=DNA -full=1 -optimum=1 -fa=/home/user/PyFeat/Datasets/DNA/FASTA.txt -la=/home/user/PyFeat/Datasets/DNA/Label.txt -ktuple=3 -kgap=5 -pseudo=1 -zcurve=1 -gc=1 -skew=1 -atgc=1 -f11=1 -f12=1 -f13=1 -f21=1 -f22=1 -f23=1 -f31=1 -f32=1
