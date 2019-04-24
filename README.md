@@ -30,18 +30,20 @@ Cloning a repository syncs it to our local machine (Example for Linux-based OS).
 ## 2. Installation Process
 ### 2.1. Required Python Packages
 `Major (Generate Features):`
-- Install: python (version >= 3.5)
+- Install: python (version >= 3.6)
 - Install: numpy (version >= 1.13.0)
+- Install: Tensorflow (version >= 2.2.4)
+- Install: Keras (version >= 2.2.4)
 
 `Minor (Performance Measures):`
 - Install: sklearn (version >= 0.19.0)
 - Install: pandas (version >= 0.21.0)
-- Install: matplotlib (version >= 2.1.0)
+- Install: matplotlib (version >= 3.0.1)
 
 ### 2.2. How to download
-`Using PIP:`  pip install `<package name>`
+`Using PIP3:`  pip3 install `<package name>`
 ```console
-user@machine:~$ pip install scikit-learn
+user@machine:~$ pip3 install scikit-learn
 ```
 **`or,`**
 
