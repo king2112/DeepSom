@@ -125,7 +125,7 @@ $ Layer = Dense(Arguments)(input)
 You can use Batchnormalization() for biasing input dataset.
 
 ```console
-layer = Batchnormalization()(layer1)
+$ layer = Batchnormalization()(layer1)
 ```
 
 #### Table 2: Arguments Details for Batchnormalization Layer
@@ -151,12 +151,27 @@ layer = Batchnormalization()(layer1)
 
 
 
+Creating object from the deep learning Network
+
+```console
+$ Model = Model(input, out)
+```
 
 
 
+### 3.3. Determining Optimizer and Compiling Method
 
+You can use Adam optimizer by call it from Keras
 
+```console
+$ adam = keras.optimizers.Adam(lr= desired learning rate)
+```
+After that using Compile() for compiling the Autoencoder Model
 
+```console
+model.compile(optimizer= desired optimizer , loss='desired loss function'))
+```
+**Note #1:**  We have exploited Adam optimizer with lr=0.00005 and MSE for loss function with default parameters. 
 
 
 
