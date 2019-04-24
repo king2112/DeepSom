@@ -98,6 +98,11 @@ You first have to determine what is the shape of input
 $ input = Input(shape = (desire shape))
 ```
 Using Dense layer for input layer
+
+```console
+$ Layer1 = Dense(Arguments)(input)
+```
+
 #### Table 1: Arguments Details for Dense Layer
 &nbsp;
 
