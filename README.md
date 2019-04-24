@@ -58,10 +58,14 @@ user@machine:~$ conda install scikit-learn
 You can run commands in console or using the Jupyter Notebook instead.  
 
 ### 3.1. Importing Dataset
-Using read_csv() for importing dataset
+Use read_csv() for importing dataset
 
 ```console
-$ pd.read_csv("CNV.csv")
+$ pd.read_csv("Dataset directory")
+```
+Use np.shape() for checking the shape of the dataset.
+```console
+$ np.shape(data)
 ```
 
 #### 3.1.1. Training Purpose
