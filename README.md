@@ -102,6 +102,7 @@ Using Dense layer for input layer
 &nbsp;
 
 |   Argument     |   Corresponding Optional Argument |     Type     |   Default | Help   |
+|     :---       |    :---:     |  :---:       |  :---:    | ---:|
 
 &nbsp;
 
