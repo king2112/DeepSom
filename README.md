@@ -105,6 +105,8 @@ Using Dense layer for input layer
 |     :---       |   :---:       |  :---:    | ---:|
 | units | Positive integer | --- | dimensionality of the output space. |
 | activation | --- | If you don't specify anything, no activation is applied | In this work we utilized 'relu' for first 4 Dense layers |
+| use_bias | Boolean | False | whether the layer uses a bias vector |
+
 
 
 &nbsp;
