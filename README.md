@@ -100,7 +100,7 @@ $ input = Input(shape = (desire shape))
 Using Dense layer for input layer
 
 ```console
-$ Layer1 = Dense(Arguments)(input)
+$ Layer = Dense(Arguments)(input)
 ```
 
 #### Table 1: Arguments Details for Dense Layer
@@ -120,16 +120,23 @@ $ Layer1 = Dense(Arguments)(input)
 | bias_constraint | --- |  | Constraint function applied to the bias vector  |
 
 
-
-
-
-
-
 &nbsp;
 
+You can use Batchnormalization() for biasing input dataset.
+
 ```console
-user@machine:~$ python main.py -seq=DNA -full=1 -optimum=1 -fa=/home/user/PyFeat/Datasets/DNA/FASTA.txt -la=/home/user/PyFeat/Datasets/DNA/Label.txt -ktuple=3 -kgap=5 -pseudo=1 -zcurve=1 -gc=1 -skew=1 -atgc=1 -f11=1 -f12=1 -f13=1 -f21=1 -f22=1 -f23=1 -f31=1 -f32=1
+layer = Batchnormalization()(layer1)
 ```
+
+#### Table 2: Arguments Details for Batchnormalization Layer
+&nbsp;
+
+|   Argument     |    Type    | Help   |
+|     :---       |   :---:    | ---:|
+| axis | Integer | --- | the axis that should be normalized (typically the features axis). For instance, after a Conv2D layer with  data_format="channels_first", set axis=1 in BatchNormalization. |
+| momentum | --- |  Momentum for the moving mean and the moving variance.  |
+
+
 
 #### 3.1.2. Evaluation Purpose
 
