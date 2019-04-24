@@ -60,6 +60,7 @@ You can run commands in console or using the Jupyter Notebook instead.
 ### 3.1. Importing Dataset
 ```console
 pd.read_csv("CNV.csv")
+```
 
 #### 3.1.1. Training Purpose
 ```console
