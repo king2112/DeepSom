@@ -80,7 +80,9 @@ $ data / np.max(data)
 ```
 By importing train_test_split from sklearn.model_selection we can divide our dataset into traing and test dataset.
 
+```console
 $ X_train, X_test,y,y = train_test_split(inputs,b,test_size= Test size Portion , random_state=Number of the random ceed)
+```
 
 #### 3.1.1. Training Purpose
 ```console
