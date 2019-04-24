@@ -72,13 +72,13 @@ By using .as_matrix() we can change the type of dataset into matrix
 ```console
 $ data.as_matrix()
 ```
-#### 3.1.1. Scaling Dataset
+#### 3.1.1. Scaling Dataset and Dividing to Training and Test Data
 
 Dividing all of the elements by maximum number
 ```console
 $ data / np.max(data)
 ```
-
+By importing train_test_split from sklearn.model_selection we can divide our dataset into traing and test dataset
 
 #### 3.1.1. Training Purpose
 ```console
