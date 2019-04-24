@@ -133,7 +133,7 @@ layer = Batchnormalization()(layer1)
 
 |   Argument     |    Type    | Help   |
 |     :---       |   :---:    | ---:|
-| axis | Integer | --- | the axis that should be normalized (typically the features axis).  |
+| axis | Integer |  the axis that should be normalized (typically the features axis).  |
 | momentum | --- |  Momentum for the moving mean and the moving variance.  |
 
 
