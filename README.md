@@ -55,7 +55,7 @@ user@machine:~$ conda install scikit-learn
 
 ## 3. Working Procedure
 
-Run command on your console or terminal.
+You can run commands in console or using the Jupyter Notebook instead.  
 
 ### 3.1. Generate Features
 #### 3.1.1. Training Purpose
