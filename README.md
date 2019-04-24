@@ -101,8 +101,9 @@ Using Dense layer for input layer
 #### Table 1: Arguments Details for Dense Layer
 &nbsp;
 
-|   Argument     |   Corresponding Optional Argument |     Type     |   Default | Help   |
-|     :---       |    :---:     |  :---:       |  :---:    | ---:|
+|   Argument     |    Type     |   Default | Help   |
+|     :---       |   :---:       |  :---:    | ---:|
+| units | Positive integer | --- | dimensionality of the output space. |
 
 &nbsp;
 
