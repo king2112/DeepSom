@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 
 # <center>DeePanc: A Python-basedFeature Construction Tool from Simple Somatic Mutational load of Protein-coding genes</center>
 
-### Authors: Rafsanjani Muhammod, Sajid Ahmed, Dewan Md Farid, Swakkhar Shatabda, Alok Sharma, and Abdollah Dehzangi
+### Authors:  MohammadHossein RezaieKheirabadi,  Hamed Dashti, Hamid R. Rabiee, and Hamid Alinejad-Rokny
 <!-- ### <center> United International University, Dhaka, Bangladesh  </center> -->
 
 &nbsp;
