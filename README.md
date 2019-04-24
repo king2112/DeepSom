@@ -81,7 +81,13 @@ $ data / np.max(data)
 By importing train_test_split from sklearn.model_selection we can divide our dataset into traing and test dataset.
 
 ```console
-$ X_train, X_test,y,y = train_test_split(inputs,b,test_size= Test size Portion , random_state=Number of the random ceed)
+$ X_train, X_test,y_train,y_test = train_test_split(inputs,b,test_size= Test size Portion , random_state=Number of the random ceed)
+```
+
+Use np.reshape() in order to reshape your dataset into desire input shape
+
+```console
+$ data =np.reshape(data, [desire shape])
 ```
 
 #### 3.1.1. Training Purpose
