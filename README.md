@@ -169,10 +169,15 @@ $ adam = keras.optimizers.Adam(lr= desired learning rate)
 After that using Compile() for compiling the Autoencoder Model
 
 ```console
-model.compile(optimizer= desired optimizer , loss='desired loss function'))
+$ model.compile(optimizer= desired optimizer , loss='desired loss function'))
 ```
-**Note #1:**  In the Liver Cancer Subtype Identification with deep learning approach, we have exploited Adam optimizer with lr=0.00005 and MSE for loss function with default parameters. 
+**Note #1:**  In the Liver Cancer Subtype Identification with deep learning approach, we have exploited Adam optimizer with lr=0.00005 and MSE for loss function with default parameters.
 
+Use Summary() for seeing detail of the model
+
+```console
+$ model.summary()
+```
 
 
 
