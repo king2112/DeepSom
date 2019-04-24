@@ -200,8 +200,37 @@ $ earlyStopping =keras.callbacks.EarlyStopping(monitor='val_loss', min_delta=0, 
 |    restore_best_weights      |   ---    | quantity to be monitored.|
 |    monitor      |   False    |  whether to restore model weights from the epoch with the best value of the monitored quantity. If False, the model weights obtained at the last step of training are used.|
 
+&nbsp;
 
 
+### 3.4. Training and Fitting Model
+
+Then use model.fit() for training the model
+
+```console
+$ autoencoder_train = model.fit(X_train,X_train,epochs=10000, batch_size=32, shuffle=True, validation_data=(X_test, X_test), callbacks=[earlyStopping])
+```
+**Note #2:**  You can modify the Fit() with desire Arguments.
+
+&nbsp;
+
+
+#### Table 4: Arguments Details for the EarlyStopping
+|   Argument     |    Type    | Help   |
+|     :---       |   :---:    | ---:|
+|    x      |   Numpy array of training data (if the model has a single input)    | or list of Numpy arrays (if the model has multiple inputs). If input layers in the model are named, you can also pass a dictionary mapping input names to Numpy arrays.  x can be None (default) if feeding from framework-native tensors (e.g. TensorFlow data tensors).|
+
+
+|    y      |    Numpy array of target (label) data (if the model has a single output)   |  or list of Numpy arrays (if the model has multiple outputs). If output layers in the model are named, you can also pass a dictionary mapping output names to Numpy arrays.  y can be None (default) if feeding from framework-native tensors (e.g. TensorFlow data tensors).|
+
+|    patience      |   Positive Integer    |  number of epochs with no improvement after which training will be stopped.|
+|    verbose      |    Integer    | verbosity mode.|
+|    mode      |   auto, min, max    | In min mode, training will stop when the quantity monitored has stopped decreasing; in max mode it will stop when the quantity monitored has stopped increasing; in auto mode, the direction is automatically inferred from the name of the monitored quantity.|
+|    baseline      |   ---    | Baseline value for the monitored quantity to reach. Training will stop if the model doesn't show improvement over the baseline.|
+|    restore_best_weights      |   ---    | quantity to be monitored.|
+|    monitor      |   False    |  whether to restore model weights from the epoch with the best value of the monitored quantity. If False, the model weights obtained at the last step of training are used.|
+
+&nbsp;
 
 
 
