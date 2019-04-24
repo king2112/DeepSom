@@ -57,7 +57,10 @@ user@machine:~$ conda install scikit-learn
 
 You can run commands in console or using the Jupyter Notebook instead.  
 
-### 3.1. Generate Features
+### 3.1. Importing Dataset
+```console
+pd.read_csv("CNV.csv")
+
 #### 3.1.1. Training Purpose
 ```console
 user@machine:~$ python main.py --sequenceType=DNA --fullDataset=1 --optimumDataset=1 --fasta=/home/user/PyFeat/Datasets/DNA/FASTA.txt --label=/home/user/PyFeat/Datasets/DNA/Labels.txt --kTuple=3 --kGap=5 --pseudoKNC=1 --zCurve=1 --gcContent=1 --cumulativeSkew=1 --atgcRatio=1 --monoMono=1 --monoDi=1 --monoTri=1 --diMono=1 --diDi=1 --diTri=1 --triMono=1 --triDi=1
