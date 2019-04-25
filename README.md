@@ -315,4 +315,5 @@ Marie-Claude Gingras, David K Miller, Angelika N Christ, Tim JC Bruxner, and Mic
 
 
 =======
-This project is licensed under the MIT License - see the  [LICENSE.md](https://github.com/king2112/DeePanc/blob/master/LICENSE) file for details.
+
+## This project is licensed under the MIT License - see the  [LICENSE.md](https://github.com/king2112/DeePanc/blob/master/LICENSE) file for details.
