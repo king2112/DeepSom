@@ -232,7 +232,7 @@ callbacks: List of keras.callbacks.Callback instances. List of callbacks to appl
 |     initial_epoch       |   Integer    | Epoch at which to start training (useful for resuming a previous training run).|
 |     steps_per_epoch       |   Integer or None    | Total number of steps (batches of samples) before declaring one epoch finished and starting the next epoch. When training with input tensors such as TensorFlow data tensors, the default None is equal to the number of samples in your dataset divided by the batch size, or 1 if that cannot be determined. |
 |     validation_steps       |   ---    |  Only relevant if steps_per_epoch is specified. Total number of steps (batches of samples) to validate before stopping. |
-|     :---       |   :---:    | ---:|
+|     validation_freq       |   Only relevant if validation data is provided. Integer or list/tuple/set    | If an integer, specifies how many training epochs to run before a new validation run is performed, e.g. validation_freq=2 runs validation every 2 epochs. If a list, tuple, or set, specifies the epochs on which to run validation, e.g. validation_freq=[1, 2, 10] runs validation at the end of the 1st, 2nd, and 10th epochs. |
 
 
 
@@ -240,51 +240,78 @@ callbacks: List of keras.callbacks.Callback instances. List of callbacks to appl
 
 
 
-#### 3.1.2. Evaluation Purpose
+#### 3.4.1. Plotting Losses ( Validation and training )
+
+Use model.history() for getting the history of the training section
+For Example:
+``` console
+$ loss = autoencoder_train.history['loss']
+```
+Then plot it with plt.figure()
+
+```console
+$ loss = autoencoder_train.history['loss']
+$ val_loss = autoencoder_train.history['val_loss']
+$ epochs = range(epochs)
+$ plt.figure()
+$ plt.plot(epochs, loss, 'bo', label='Training loss')
+$ plt.plot(epochs, val_loss, 'b', label='Validation loss')
+$ plt.title('Training and validation loss')
+$ plt.legend()
+$ plt.show()
+```
 
 
-#### Table 1: Arguments Details for the Features Generation
+### Extracting Features which has been Constructed
 
+You then may use Model(inputs=model.input, outputs=model.get_layer('bottleneck').output)
+**Note #3:**  You can change 'bottleneck' into your desire layer which you want to extract its values.
 
-#### Table 2: Feature Description
-
-
-### 3.2. Run Machine Learning Classifiers (Optional)
-
-
-
-&nbsp;
-
-#### Table 3: Arguments Details for the Machine Learning Classifiers
-
-
-&nbsp;
-### 3.3. Training Model (Optional)
+```console
+$ m2 = Model(inputs=model.input, outputs=model.get_layer('bottleneck').output)
+$ Y = m2.predict(patients)
+$ Y =np.reshape(Y , (473, 3))
+$ df = pd.DataFrame(Y)
+$ df.to_csv("features.csv",index = False)
+```
 
 
 
-&nbsp;
-
-#### Table 4: Arguments Details for Training Model
-
-
-### 3.4. Evaluation Model (Optional)
-
-
-
-&nbsp;
-
-#### Table 5: Arguments Details for Evaluation Model
 
 
 ## References
 
-**[1]** Bin Liu, Fule Liu, Longyun Fang, Xiaolong Wang, and Kuo-Chen Chou. repdna: a
-python package to generate various modes of feature vectors for dna sequences by in-
-corporating user-defined physicochemical properties and sequence-order effects. Bioin-
-formatics, 31(8):1307–1309, 2014.
+
+
+**[1]** Bailey, Peter, David K Chang, Katia Nones, Amber L Johns, Ann-Marie Patch,
+Marie-Claude Gingras, David K Miller, Angelika N Christ, Tim JC Bruxner, and Michael C Quinn.
+2016. 'Genomic analyses identify molecular subtypes of pancreatic cancer', Nature, 531: 47.
+
+**[2]** Cao, Dong-Sheng, Qing-Song Xu, and Yi-Zeng Liang. 2013. 'propy:
+ a tool to generate various modes of Chou’s PseAAC', Bioinformatics, 29: 960-62.
+
+**[3]** Chen, Quanjun, Xuan Song, Harutoshi Yamada, and Ryosuke Shibasaki. 2016.
+ "Learning deep representation from big and heterogeneous data for traffic accident inference."
+ In Thirtieth AAAI Conference on Artificial Intelligence.
+
+**[4]** Chowdhury, Shahana Yasmin, Swakkhar Shatabda, and Abdollah Dehzangi. 2017.
+ 'iDNAprot-es: Identification of DNA-binding proteins using evolutionary and structural features',
+  Scientific reports, 7: 14938.
+
+**[5]** Miotto, Riccardo, Li Li, Brian A Kidd, and Joel T Dudley. 2016.
+ 'Deep patient: an unsupervised representation to predict the future of patients from the electronic health records',
+  Scientific reports, 6: 26094.
+
+**[6]** Tamimi, Rulla M, Graham A Colditz, Aditi Hazra, Heather J Baer, Susan E Hankinson, Bernard Rosner,
+ Jonathan Marotti, James L Connolly, Stuart J Schnitt, and Laura C Collins. 2012.
+  'Traditional breast cancer risk factors in relation to molecular subtypes of breast cancer',
+   Breast cancer research and treatment, 131: 159-67.
+
+**[7]** Yamashita, Taro, Marshonna Forgues, Wei Wang, Jin Woo Kim, Qinghai Ye,
+ Huliang Jia, Anuradha Budhu, Krista A Zanetti, Yidong Chen, and Lun-Xiu Qin. 2008.
+  'EpCAM and α-fetoprotein expression defines novel prognostic subtypes of hepatocellular carcinoma',
+   Cancer research, 68: 1451-61.
+
 
 
 =======
-MOHEMM
->>>>>>> c2529519364e67154520318d9ad259d25dfa2800
