@@ -230,7 +230,10 @@ callbacks: List of keras.callbacks.Callback instances. List of callbacks to appl
 |     class_weight       |   Optional dictionary mapping class indices (integers) to a weight (float) value, used for weighting the loss function (during training only)    |  This can be useful to tell the model to "pay more attention" to samples from an under-represented class.|
 |     sample_weight       |   Optional Numpy array of weights for the training samples, used for weighting the loss function (during training only).    | You can either pass a flat (1D) Numpy array with the same length as the input samples (1:1 mapping between weights and samples), or in the case of temporal data, you can pass a 2D array with shape  (samples, sequence_length), to apply a different weight to every timestep of every sample. In this case you should make sure to specify sample_weight_mode="temporal" in compile().|
 |     initial_epoch       |   Integer    | Epoch at which to start training (useful for resuming a previous training run).|
+|     steps_per_epoch       |   Integer or None    | Total number of steps (batches of samples) before declaring one epoch finished and starting the next epoch. When training with input tensors such as TensorFlow data tensors, the default None is equal to the number of samples in your dataset divided by the batch size, or 1 if that cannot be determined. |
+|     validation_steps       |   ---    |  Only relevant if steps_per_epoch is specified. Total number of steps (batches of samples) to validate before stopping. |
 |     :---       |   :---:    | ---:|
+
 
 
 &nbsp;
