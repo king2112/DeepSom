@@ -1,5 +1,5 @@
 
-# <center>DeePanc: A Python-based Feature Construction Tool from Simple Somatic Mutational load of Protein-coding genes</center>
+# <center>DeepSom: A Python-based Feature Construction Tool from Simple Somatic Mutational load of Protein-coding genes</center>
 
 ### Authors:  MohammadHossein RezaieKheirabadi,  Hamed Dashti, Hamid R. Rabiee, and Hamid Alinejad-Rokny
 <!-- ### <center> United International University, Dhaka, Bangladesh  </center> -->
